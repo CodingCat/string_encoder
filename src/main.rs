@@ -1,7 +1,11 @@
 use std::env;
 
-use base_x::encode;
 extern crate base_x;
+use base_x::encode;
+
+fn encode_string_with_base_36(str: &str) -> String {
+    return encode("0123456789abcdefghijklmnopqrstuvwxyz", str.as_bytes());
+}
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -10,6 +14,9 @@ fn main() {
         std::process::exit(1);
     }
     let input_string = &args[1];
-    let encoded = encode("0123456789abcdefghijklmnopqrstuvwxyz", input_string.as_bytes());
+    let encoded = encode_string_with_base_36(input_string);
     println!("{}", encoded)
 }
+
+#[cfg(test)]
+mod test;
