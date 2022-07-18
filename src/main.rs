@@ -10,7 +10,7 @@ fn encode_string_with_base_36(str: &str) -> String {
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() != 2 {
-        eprintln!("Usage: {} input string", args[0]);
+        eprintln!("Usage: {} input_string", args[0]);
         std::process::exit(1);
     }
     let input_string = &args[1];
