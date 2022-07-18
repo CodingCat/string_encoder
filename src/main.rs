@@ -3,8 +3,8 @@ use std::env;
 extern crate base_x;
 use base_x::encode;
 
-fn encode_string_with_base_36(str: &str) -> String {
-    return encode("0123456789abcdefghijklmnopqrstuvwxyz", str.as_bytes());
+fn encode_string_with_base_36(input_str: &str) -> String {
+    return encode("0123456789abcdefghijklmnopqrstuvwxyz", input_str.as_bytes());
 }
 
 fn main() {
