@@ -6,3 +6,4 @@
      Running `target/debug/string_encoder`
 Usage: target/debug/string_encoder input_string
 ```
+abc
